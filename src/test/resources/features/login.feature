@@ -10,10 +10,12 @@ Funcionalidade: Login
     Quando for realizado um clique fora da modal
     Então a janela modal deve ser fechada
 
+  @fecharModalIcone
   Cenário: Fechar a modal ao clicar no icone fechar
     Quando for realizado em clique no icone de fechar a modal
     Então a janela modal deve ser fechada
 
+  @createNewAccount
   Cenário: Link Create New Account
     Quando for realizado um clique no link create new account
     Então a pagina create new account deve ser exibida
