@@ -5,6 +5,7 @@ Funcionalidade: Login
   Contexto:
     Dado que a modal esteja sendo exibida
 
+  @fecharModal
   Cenário: Fechar a modal ao clicar fora da mesma
     Quando for realizado um clique fora da modal
     Então a janela modal deve ser fechada
