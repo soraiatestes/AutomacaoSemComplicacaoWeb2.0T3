@@ -40,6 +40,7 @@ public class LoginPage {
 
     public void clickLinkCreateAccount(){
         loginMap.linkCreateAccount.click();
+
     }
 
     public void clickBtnSignIn(){
@@ -57,4 +58,16 @@ public class LoginPage {
     public void invisibilityOfBtnFechar(){
         Driver.invisibilityOf((loginMap.btnFechar));
     }
+
+    public void aguardaLoader(){
+        Driver.attributChange(loginMap.divLoader, "display", "none");
+    }
+
+//    public void visibilityOfLinkCreateAccount(){
+//      Driver.visibilityOf(loginMap.linkCreateAccount);
+    }
+
+
+
+
 }
