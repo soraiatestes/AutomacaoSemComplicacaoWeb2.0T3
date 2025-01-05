@@ -2,6 +2,7 @@ package br.com.chronosacademy.core;
 
 import br.com.chronosacademy.enums.Browser;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -42,6 +43,7 @@ public class Driver {
         }
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
+
     }
 
     public static WebDriver getDriver() {

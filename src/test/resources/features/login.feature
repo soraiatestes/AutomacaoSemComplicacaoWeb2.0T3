@@ -47,6 +47,7 @@ Funcionalidade: Login
       | usuario invalido | invalido | senha    | false    |
       | senha invalida   | chrome   | invalida | false    |
 
+  @dadosEmBranco
   Esquema do Cenario: Realizar o login com <identificacao>
     Quando os campos de login sejam preenchidos da seguinte forma
       | login    | <login>    |

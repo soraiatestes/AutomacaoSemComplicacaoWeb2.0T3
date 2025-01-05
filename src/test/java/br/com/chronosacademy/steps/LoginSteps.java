@@ -54,8 +54,9 @@ public class LoginSteps {
 
     @Quando("for realizado um clique no link create new account")
     public void forRealizadoUmCliqueNoLinkCreateNewAccount() {
-//      loginPage.visibilityOfLinkCreateAccount();
+        loginPage.visibilityOfLinkCreateAccount();
         loginPage.clickLinkCreateAccount();
+
     }
 
     @Então("a pagina create new account deve ser exibida")
