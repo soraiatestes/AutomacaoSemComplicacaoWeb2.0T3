@@ -76,12 +76,20 @@ public class LoginPage {
 
     public void visibilityOfLinkCreateAccount() {
        Driver.visibilityOf(loginMap.linkCreateAccount);
-
-
 //     WebDriver Driver;
 //         Actions actions = new Actions(getDriver());
 //     actions.moveToElement(loginMap.linkCreateAccount).perform();
-
     }
+
+    public String getUsuarioLogado(){
+        Driver.visibilityOf(loginMap.textLogado);
+        return loginMap.textLogado.getText();
+    }
+
+    public String getErroLogin(){
+        Driver.visibilityOf(loginMap.textErroLogin);
+        return loginMap.textErroLogin.getText();
+    }
+
 }
 
