@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -94,9 +95,20 @@ public class Driver {
 //  }
 
     private static void startChrome(){
-          WebDriverManager.chromedriver().setup();
-          driver = new ChromeDriver();
-      }
+        ChromeOptions options = new ChromeOptions();
+        String headlessProp = System.getProperty("headless", "false");
+        boolean headless = Boolean.parseBoolean(headlessProp);
+        if (headless){
+            options.addArguments("--headless=new");
+        }
+        options.addArguments("window-size=720,500");
+        driver = new ChromeDriver(options);
+    }
+
+//  private static void startChrome(){
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//    }
 
     public static WebDriver getDriver() {
         return driver;
