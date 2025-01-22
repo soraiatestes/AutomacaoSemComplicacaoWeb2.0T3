@@ -2,6 +2,7 @@ package br.com.chronosacademy.pages;
 
 import br.com.chronosacademy.core.Driver;
 import br.com.chronosacademy.maps.NewAccountMap;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
@@ -39,6 +40,15 @@ public class NewAccountPage {
         Driver.aguardaOptions(select);
         select.selectByVisibleText(country);
     }
+
+
+//  public void selectCountry(String country) {
+//      WebElement countryDropdown = newAccountMap.slcCountry;
+//      Select select = new Select(countryDropdown);
+//      Driver.aguardaOptions(select);
+//      select.selectByVisibleText("Chile");
+//  }
+
 
     public void clickInpIagree(){
         newAccountMap.inpIagree.click();

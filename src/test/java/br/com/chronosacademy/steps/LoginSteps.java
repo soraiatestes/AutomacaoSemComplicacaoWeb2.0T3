@@ -38,17 +38,18 @@ public class LoginSteps {
     }
 
     @Dado("que a modal esteja sendo exibida")
-    public void queAModalEstejaSendoExibida() {
+    public void queAModalEstejaSendoExibida() throws IOException {
         Driver.getDriver().get("https://advantageonlineshopping.com/");
         loginPage = new LoginPage();
         loginPage.clickBtnLogin();
         loginPage.visibilityOfBtnFechar();
         loginPage.aguardaLoader();
+        Driver.printScreen("modal esteja sendo exibida");
     }
-    @Quando("for realizado um clique fora da modal")
-    public void forRealizadoUmCliqueForaDaModal() {
-        loginPage.clickDivFechaModal();
-    }
+//  @Quando("for realizado um clique fora da modal")
+//  public void forRealizadoUmCliqueForaDaModal() {
+//      loginPage.clickDivFechaModal();
+//  }
     @Então("a janela modal deve ser fechada")
     public void aJanelaModalDeveSerFechada() throws Exception {
         try{
@@ -72,10 +73,10 @@ public class LoginSteps {
     }
 
     @Então("a pagina create new account deve ser exibida")
-    public void aPaginaCreateNewAccountDeveSerExibida() {
+    public void aPaginaCreateNewAccountDeveSerExibida() throws IOException {
         NewAccountPage newAccountPage = new NewAccountPage();
         Assert.assertEquals("CREATE ACCOUNT", newAccountPage.getTextNewAccount());
-        
+        Driver.printScreen("pagina create new accountexibida");
     }
 
     @Quando("os campos de login sejam preenchidos da seguinte forma")
@@ -103,15 +104,16 @@ public class LoginSteps {
     }
 
     @Então("o sistema devera exibir uma mensagem de erro")
-    public void oSistemaDeveraExibirUmaMensagemDeErro() {
+    public void oSistemaDeveraExibirUmaMensagemDeErro() throws IOException {
         Assert.assertEquals("Incorrect user name or password.", loginPage.getErroLogin());
-        
+        Driver.printScreen("mensagem de erro");
     }
 
     @Então("o botao sign in deve permanecer desabilitado")
-    public void oBotaoSignInDevePermanecerDesabilitado() {
+    public void oBotaoSignInDevePermanecerDesabilitado() throws IOException {
         boolean enabled = loginPage.isBtnSignIn();
         Assert.assertFalse(enabled);
+        Driver.printScreen("botão signIn desabilitado");
     }
 
     @Dado("que esteja logado no sisttema com")
@@ -120,6 +122,6 @@ public class LoginSteps {
         osCamposDeLoginSejamPreenchidosDaSeguinteForma(map);
         forRealizadoOCliqueNoBotaoSignIn();
         deveSerPossivelLogarNoSistema();
-
+        Driver.printScreen("logado no sistema");
     }
 }
