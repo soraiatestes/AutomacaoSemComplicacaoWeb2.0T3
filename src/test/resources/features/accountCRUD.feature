@@ -9,7 +9,7 @@ Funcionalidade: Account CRUD
       | username | chronosTeste2              |
       | email    | chronosteste2@email.com.br |
       | password | Senha123                   |
-      | country  | Brazil                     |
+      | country  | Chile                     |
     Entao deve ser possivel logar no sistema apos o cadastro
 
   @loginCRUD

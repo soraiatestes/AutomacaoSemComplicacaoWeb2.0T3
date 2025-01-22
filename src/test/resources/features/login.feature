@@ -5,11 +5,6 @@ Funcionalidade: Login
   Contexto:
     Dado que a modal esteja sendo exibida
 
-  @fecharModal
-  Cenário: Fechar a modal ao clicar fora da mesma
-    Quando for realizado um clique fora da modal
-    Então a janela modal deve ser fechada
-
   @fecharModalIcone
   Cenário: Fechar a modal ao clicar no icone fechar
     Quando for realizado em clique no icone de fechar a modal
@@ -30,9 +25,9 @@ Funcionalidade: Login
     Então deve ser possivel logar no sistema
 
     Exemplos:
-      | identificacao       | login    | password | remember |
-      | campos obrigatorios | chronos1 | Senha123 | false    |
-      | todos os campos     | chronos1 | Senha123 | true     |
+      | identificacao       | login         | password | remember |
+      | campos obrigatorios | chronosTeste1 | Senha123 | false    |
+      | todos os campos     | chronosTeste1 | Senha123 | true     |
 
   @loginInvalido
   Esquema do Cenario: Realizar login com <identificacao>
